@@ -30,11 +30,10 @@ test:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
+  host: 127.0.0.1
   adapter: mysql2
-  encoding: utf8
   database: monepicerie3_production
   pool: 5
   username: root
-  password:
-  host: 127.0.0.1
+  password: 321eRRe!p
   socket: /var/run/mysqld/mysqld.sock
