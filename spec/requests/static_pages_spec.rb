@@ -8,9 +8,13 @@ describe "StaticPages" do
       # we express the expectation that the resulting page should have the right content
       expect(page).to have_content('Mon epicerie')
     end
-    it "should have the right title" do
+    it "should have the base title" do
       visit '/static_pages/home'
-      expect(page).to have_title("Mon epicerie | Acceuil")
+      expect(page).to have_title("Mon epicerie")
+    end
+    it "should not have a custom page title" do
+      visit '/static_pages/home'
+      expect(page).not_to have_title('| Acceuil|')
     end
   end
   
@@ -19,9 +23,13 @@ describe "StaticPages" do
       visit '/static_pages/help'
       expect(page).to have_content('Aide')
     end
-    it "shojuld have the title 'Aide'" do
+    it "should have the base title 'Aide'" do
       visit '/static_pages/help'
-      expect(page).to have_title("Mon epicerie | Aide")
+      expect(page).to have_title("Mon epicerie")
+    end
+    it "should not have a custom page title" do
+      visit '/static_pages/help'
+      expect(page).not_to have_title('| Aide|')
     end
   end
   
@@ -30,9 +38,13 @@ describe "StaticPages" do
       visit '/static_pages/about'
       expect(page).to have_content('A Propos')
     end
-    it "should have the title 'A Propos'" do
+    it "should have the base title 'A Propos'" do
       visit '/static_pages/about'
-      expect(page).to have_title('Mon epicerie | A Propos')
+      expect(page).to have_title('Mon epicerie')
+    end
+    it "should not have a custom page title" do
+      visit '/static_pages/help'
+      expect(page).not_to have_title('| A Propos|')
     end
   end
 end
