@@ -10,6 +10,7 @@ group :development, :test do
   # Use mysql as the database for Active Record
   gem 'mysql2', '0.3.11'
   gem 'rspec-rails', '2.13.1'
+  gem 'factory_girl_rails', '4.2.1'
 end
 
 # Use SCSS for stylesheets
