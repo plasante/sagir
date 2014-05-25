@@ -8,7 +8,8 @@ gem 'bootstrap-sass', '2.3.2.0'
 
 group :development, :test do
   # Use mysql as the database for Active Record
-  gem 'mysql2', '0.3.11'
+  #gem 'mysql2', '0.3.11'
+  gem 'pg', '0.15.1'
   gem 'rspec-rails', '2.13.1'
   gem 'factory_girl_rails', '4.2.1'
 end
