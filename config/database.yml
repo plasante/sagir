@@ -13,7 +13,7 @@ development:
   adapter: postgresql
   database: monepicerie3_development
   pool: 5
-  username: root
+  username: plasante
   password: 321eRRe!p
   #socket: /var/run/mysqld/mysqld.sock
 
@@ -25,15 +25,15 @@ test:
   adapter: postgresql
   database: monepicerie3_test
   pool: 5
-  username: root
+  username: plasante
   password: 321eRRe!p
   #socket: /var/run/mysqld/mysqld.sock
 
 production:
   host: 127.0.0.1
-  adapter: mysql2
+  adapter: postgresql
   database: monepicerie3_production
   pool: 5
-  username: root
+  username: plasante
   password: 321eRRe!p
   socket: /var/run/mysqld/mysqld.sock
